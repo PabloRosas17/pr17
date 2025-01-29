@@ -1,0 +1,24 @@
+# Logs
+*.log
+# Dependencies
+node_modules/
+# Build
+build/
+# Temporary
+*.tmp
+*.swp
+# OS generated
+.DS_Store
+# Environment
+# ALLOW: .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# GitHub Pages
+public/
+# Testing
+/coverage
+# Formatter
+.prettierrc
+.prettierignore
