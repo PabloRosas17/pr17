@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Box, Stack, Tabs } from '@mui/material';
+import { Box } from '@mui/material';
 import AboutSection from '../components/AboutSection.js';
 import MuiBreadCrumbs from '../components/MuiBreadCrumbs.js';
 import CenteredBox from '../components/CenteredBox.js';
-import ContactTabs from '../components/ContactTabs'; // Reusable component
+import ContactTabs from '../components/ContactTabs';
 import StickyHeader from '../components/StickyHeader.js';
 
 const AboutPage = () => {
