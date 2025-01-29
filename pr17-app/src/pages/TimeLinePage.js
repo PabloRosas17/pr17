@@ -6,7 +6,7 @@ import MuiBreadCrumbs from '../components/MuiBreadCrumbs.js';
 import StickyHeader from '../components/StickyHeader.js';
 import TimeLineCard from '../components/TimeLineCard.js';
 import timelineData from '../assets/data/timelineData.js';
-import ContactTabs from '../components/ContactTabs'; // New component
+import ContactTabs from '../components/ContactTabs';
 
 const TimeLinePage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
