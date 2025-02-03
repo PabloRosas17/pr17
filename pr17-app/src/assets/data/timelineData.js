@@ -6,7 +6,7 @@ const timelineData = [
     /* throws a warning because of the '\' to get a new line. bypass this. compatibility */
     { title: "PyFunzies", content: "🐑 PyFunzies is an ai data driven application that \
       improves effectiveness and efficiency of online ad targeting for an e-commerce platform"
-      , link: "https://github.com/PabloRosas17/Algorithms/tree/main/EclipsePy/py-funzies" },
+      , link: "https://github.com/PabloRosas17/Vaults/tree/main/EclipsePy/py-funzies" },
     { title: "LeBéauté", content: "💕 LeBéauté es una aplicación dedicada al servicio de belleza."
       , link: "https://github.com/PabloRosas17/LeBeaute" },
     { title: "SwiftTruck", content: "🚚 SwiftTruck is a SaaS application for mobile business. " 
