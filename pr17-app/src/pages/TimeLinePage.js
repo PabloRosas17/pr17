@@ -4,15 +4,19 @@ import { Stack } from '@mui/material';
 import TimeLineCard from '../components/cards/timeline/TimeLineCard';
 import timelineData from '../assets/data/timelineData';
 import useExpandable from '../hooks/useExpandable';
-import useContactHandlers from '../hooks/useContactHandlers';
 import MainLayout from '../components/layout/MainLayout';
 import ContactTabs from '../components/layout/contact/ContactTabs';
 import MuiAboutChip from '../components/about/MuiAboutChip';
+import {
+  handleResumeClick,
+  handleEmailClick,
+  handleGitHubClick,
+  handleLinkedInClick,
+} from '../hooks/useContactHandlers';
 
 const TimeLinePage = () => {
   const { expandedIndex, handleExpand } = useExpandable();
-  const { handleEmailClick, handleGitHubClick, handleLinkedInClick } = useContactHandlers();
-
+  
   return (
     <MainLayout>
       <Stack direction="column" spacing={4} sx={{ width: '100%', maxWidth: 1200 }}>
@@ -38,6 +42,7 @@ const TimeLinePage = () => {
         </Timeline>
       </Stack>
       <ContactTabs
+        handleResumeClick={handleResumeClick}
         handleLinkedInClick={handleLinkedInClick}
         handleGitHubClick={handleGitHubClick}
         handleEmailClick={handleEmailClick}
