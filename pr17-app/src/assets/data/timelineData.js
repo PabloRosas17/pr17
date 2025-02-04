@@ -1,21 +1,14 @@
 const timelineData = [
   {
-    title: 'Résumé',
-    content: 'This is my résumé. 📄',
-    link: 'https://www.dropbox.com/scl/fi/evtynz1mn105sxd8yfo39/pablorosas_rs_fw.pdf?rlkey=o4ygcfgvn5dtm7pl6awnsv06c&st=76islsw0&dl=0',
-  },
-
-  {
     title: 'PyFunzies',
-    content: `🐑 PyFunzies is an AI data-driven application that
-    improves effectiveness and efficiency of online ad targeting for an e-commerce platform`,
-    link: 'https://github.com/PabloRosas17/Vaults/tree/main/EclipsePy/py-funzies',
+    content: `🐑 PyFunzies is an AI data-driven application for an e-commerce platform`,
+    link: '',
   },
 
   {
     title: 'LeBéauté',
     content: '💕 LeBéauté es una aplicación dedicada al servicio de belleza.',
-    link: 'https://github.com/PabloRosas17/LeBeaute',
+    link: '',
   },
 
   {

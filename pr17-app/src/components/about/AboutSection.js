@@ -4,6 +4,7 @@ import { useResponsive } from '../../hooks/useResponsive';
 import { AboutSectionContent } from './AboutSectionContent';
 import { AboutSectionStyle } from './AboutSectionStyle';
 import TimeLineTypographySection from '../cards/timeline/TimeLineTypographySection';
+import AboutCopyrightBox from './AboutCopyrightBox.js'
 
 const AboutSection = () => {
   const isSmallScreen = useResponsive();
@@ -29,6 +30,7 @@ const AboutSection = () => {
         <br />
         {AboutSectionContent.invitation}
       </TimeLineTypographySection>
+      <AboutCopyrightBox />
     </Paper>
   );
 };
