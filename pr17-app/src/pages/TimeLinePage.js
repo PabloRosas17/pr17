@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent } from '@mui/lab';
-import { Stack, Box } from '@mui/material';
-import MuiAboutChip from '../components/MuiAboutChip.js';
-import MuiBreadCrumbs from '../components/MuiBreadCrumbs.js';
-import StickyHeader from '../components/StickyHeader.js';
-import TimeLineCard from '../components/TimeLineCard.js';
-import timelineData from '../assets/data/timelineData.js';
-import ContactTabs from '../components/ContactTabs';
+import { Stack } from '@mui/material';
+import TimeLineCard from '../components/cards/timeline/TimeLineCard';
+import timelineData from '../assets/data/timelineData';
+import useExpandable from '../hooks/useExpandable';
+import useContactHandlers from '../hooks/useContactHandlers';
+import MainLayout from '../components/layout/MainLayout';
+import ContactTabs from '../components/layout/contact/ContactTabs';
+import MuiAboutChip from '../components/about/MuiAboutChip';
 
 const TimeLinePage = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
-  const handleExpand = (index) => { setExpandedIndex(index === expandedIndex ? null : index); };
-  const handleEmailClick = () => window.location.href = 'mailto:pablo.rosas.0170@gmail.com';
-  const handleGitHubClick = () => window.open('https://github.com/PabloRosas17', '_blank');
-  const handleLinkedInClick = () => window.open('https://www.linkedin.com/in/PabloRosas17', '_blank');
+  const { expandedIndex, handleExpand } = useExpandable();
+  const { handleEmailClick, handleGitHubClick, handleLinkedInClick } = useContactHandlers();
 
   return (
     <MainLayout>
@@ -48,15 +46,5 @@ const TimeLinePage = () => {
     </MainLayout>
   );
 };
-
-const MainLayout = ({ children }) => (
-  <div style={{ height: '100vh', overflow: 'auto' }}>
-    <StickyHeader />
-    <MuiBreadCrumbs />
-    <Box sx={{ backgroundColor: 'background.default', padding: 2, height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-      {children}
-    </Box>
-  </div>
-);
 
 export default TimeLinePage;
