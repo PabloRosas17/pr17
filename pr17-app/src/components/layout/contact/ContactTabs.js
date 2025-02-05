@@ -16,7 +16,7 @@ const ContactTabs = ({
 }) => (
   <Stack direction="column" spacing={1} alignItems="center">
     <Tabs
-      value={value}
+      value={value ?? 0}
       onChange={handleChange}
       aria-label="contact tabs"
       sx={{ '& .MuiTabs-indicator': { display: 'none' } }}

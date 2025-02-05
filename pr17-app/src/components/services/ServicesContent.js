@@ -1,4 +1,4 @@
-import { Box, Stack } from '@mui/material';
+import { Box } from '@mui/material';
 import servicesData from '../../assets/data/servicesData.js';
 import ServicesCard from './ServicesCard.js';
 
@@ -13,14 +13,15 @@ const ServicesContent = () => {
         marginBottom: 3,
       }}
     >
-      <Stack
-        direction="row"
-        spacing={2}
+      <Box
         sx={{
-          width: '100%',
+          display: 'flex',
+          flexWrap: { xs: 'wrap', md: 'nowrap' },
           justifyContent: 'center',
           alignItems: 'center',
-          flexWrap: 'wrap',
+          gap: 1,
+          width: '100%',
+          maxWidth: 1200,
         }}
       >
         {servicesData.map((item, index) => (
@@ -31,7 +32,7 @@ const ServicesContent = () => {
             emoji={item.ic}
           />
         ))}
-      </Stack>
+      </Box>
     </Box>
   );
 };

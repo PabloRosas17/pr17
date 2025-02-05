@@ -1,7 +1,16 @@
 import { Box } from '@mui/material';
 
 const ContactBoxPosition = ({ children }) => (
-  <Box sx={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)' }}>
+  <Box
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      padding: 1,
+      backgroundColor: 'background.paper',
+    }}
+  >
     {children}
   </Box>
 );
