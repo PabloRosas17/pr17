@@ -6,6 +6,7 @@ const BreadCrumbItem = ({ label, isLast }) => (
     <Chip
       label={label}
       color={isLast ? 'primary' : 'default'}
+      component="span"
       size="small"
       sx={{
         color: 'primary.light',

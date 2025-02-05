@@ -12,17 +12,13 @@ import TimeLineCard from '../components/cards/timeline/TimeLineCard';
 import timelineData from '../assets/data/timelineData';
 import useExpandable from '../hooks/useExpandable';
 import MainLayout from '../components/layout/MainLayout';
-import ContactTabs from '../components/layout/contact/ContactTabs';
 import MuiAboutChip from '../components/about/MuiAboutChip';
-import {
-  handleResumeClick,
-  handleEmailClick,
-  handleGitHubClick,
-  handleLinkedInClick,
-} from '../hooks/useContactHandlers';
 import ServicesContent from '../components/services/ServicesContent';
+import ContactSection from '../components/layout/contact/ContactSection';
+import useTabState from '../hooks/useTabState';
 
 const TimeLinePage = () => {
+  const { value, handleChange } = useTabState(0);
   const { expandedIndex, handleExpand } = useExpandable();
 
   return (
@@ -66,12 +62,7 @@ const TimeLinePage = () => {
           ))}
         </Timeline>
       </Stack>
-      <ContactTabs
-        handleResumeClick={handleResumeClick}
-        handleLinkedInClick={handleLinkedInClick}
-        handleGitHubClick={handleGitHubClick}
-        handleEmailClick={handleEmailClick}
-      />
+      <ContactSection value={value} handleChange={handleChange} />
       <MuiAboutChip />
     </MainLayout>
   );

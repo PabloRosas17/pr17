@@ -1,35 +1,22 @@
-import { Paper } from '@mui/material';
 import React from 'react';
+import { Paper } from '@mui/material';
 import { useResponsive } from '../../hooks/useResponsive';
 import { AboutSectionContent } from './AboutSectionContent';
+import AboutSectionHeading from './AboutSectionHeading';
+import AboutSectionBody from './AboutSectionBody';
+import AboutCopyrightBox from './AboutCopyrightBox.js';
 import { AboutSectionStyle } from './AboutSectionStyle';
-import TimeLineTypographySection from '../cards/timeline/TimeLineTypographySection';
-import AboutCopyrightBox from './AboutCopyrightBox.js'
 
 const AboutSection = () => {
   const isSmallScreen = useResponsive();
 
   return (
     <Paper sx={AboutSectionStyle(isSmallScreen)}>
-      <TimeLineTypographySection
-        variant={isSmallScreen ? 'h5' : 'h4'}
-        sx={{ color: 'primary.dark' }}
-      >
-        {AboutSectionContent.greeting}
-      </TimeLineTypographySection>
-      <TimeLineTypographySection
-        variant="body1"
-        sx={{
-          color: 'primary.light',
-          fontSize: isSmallScreen ? '14px' : '16px',
-        }}
-      >
-        {AboutSectionContent.introduction}
-        <br />
-        {AboutSectionContent.description}
-        <br />
-        {AboutSectionContent.invitation}
-      </TimeLineTypographySection>
+      <AboutSectionHeading
+        isSmallScreen={isSmallScreen}
+        greeting={AboutSectionContent.greeting}
+      />
+      <AboutSectionBody isSmallScreen={isSmallScreen} />
       <AboutCopyrightBox />
     </Paper>
   );
