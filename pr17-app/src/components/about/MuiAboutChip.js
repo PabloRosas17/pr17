@@ -12,9 +12,6 @@ const MuiAboutChip = () => {
       to="/about"
       sx={{
         color: 'primary.light',
-        position: 'fixed',
-        bottom: 16,
-        right: 16,
         padding: '2px 10px',
         transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
         '&:hover': {
