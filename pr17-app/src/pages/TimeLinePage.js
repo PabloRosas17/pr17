@@ -12,7 +12,6 @@ import TimeLineCard from '../components/cards/timeline/TimeLineCard';
 import timelineData from '../assets/data/timelineData';
 import useExpandable from '../hooks/useExpandable';
 import MainLayout from '../components/layout/MainLayout';
-import MuiAboutChip from '../components/about/MuiAboutChip';
 import ServicesContent from '../components/services/ServicesContent';
 import ContactSection from '../components/layout/contact/ContactSection';
 import useTabState from '../hooks/useTabState';
@@ -63,7 +62,6 @@ const TimeLinePage = () => {
         </Timeline>
       </Stack>
       <ContactSection value={value} handleChange={handleChange} />
-      <MuiAboutChip />
     </MainLayout>
   );
 };

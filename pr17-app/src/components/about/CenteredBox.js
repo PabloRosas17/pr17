@@ -8,6 +8,7 @@ const CenteredBox = ({ children }) => (
       justifyContent: 'center',
       alignItems: 'center',
       height: '80%',
+      marginTop: 1
     }}
   >
     {children}

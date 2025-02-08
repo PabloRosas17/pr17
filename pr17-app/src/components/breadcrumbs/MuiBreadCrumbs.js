@@ -1,10 +1,10 @@
 import React from 'react';
-import { Breadcrumbs } from '@mui/material';
+import { Box, Breadcrumbs, Card, CardContent, Typography } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import routes from '../../routes/routes.js';
-import { BreadCrumbStyles } from './BreadCrumbStyles.js';
 import BreadCrumbList from './BreadCrumbList.js';
-import CurrentLabel from './CurrentLabel.js'
+import CurrentLabel from './CurrentLabel.js';
+import { BreadCrumbStyles } from './BreadCrumbStyles.js';
 
 const MuiBreadCrumbs = () => {
   const location = useLocation();
@@ -29,18 +29,94 @@ const MuiBreadCrumbs = () => {
     currentLabel = 'timeline';
   }
 
+  const filteredPathnames = pathnames.filter(
+    (pathname) => pathname !== 'about'
+  );
+
   return (
-    <Breadcrumbs aria-label="breadcrumb" sx={BreadCrumbStyles}>
-      <BreadCrumbList
-        pathnames={pathnames}
-        routes={routes}
-        capitalizeFirstLetter={capitalizeFirstLetter}
-      />
-      <CurrentLabel
-        currentLabel={currentLabel}
-        capitalizeFirstLetter={capitalizeFirstLetter}
-      />
-    </Breadcrumbs>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100%',
+        padding: '3px',
+        backgroundColor: 'primary.light',
+        borderRadius: '7px',
+        boxShadow: 5,
+      }}
+    >
+      <Box
+        sx={{
+          width: '100%',
+          padding: '1px',
+          display: 'flex',
+          justifyContent: 'flex-start',
+        }}
+      >
+        <CurrentLabel
+          currentLabel={currentLabel}
+          capitalizeFirstLetter={capitalizeFirstLetter}
+        />
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Card
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'primary.light',
+            padding: '0px',
+            borderRadius: '7px',
+            boxShadow: 3,
+            textAlign: 'center',
+            minWidth: '200px',
+            transition: 'transform 0.3s, box-shadow 0.3s',
+            '&:hover': {
+              transform: 'scale(1.05)',
+              boxShadow: 7,
+            },
+          }}
+        >
+          <CardContent sx={{ padding: '0px' }}>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 'bold',
+                color: 'secondary.dark',
+              }}
+            >
+              Soy, Pablo
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: '300',
+                fontStyle: 'italic',
+                fontSize: '11px',
+                color: 'secondary.main',
+              }}
+            >
+              specialist in mobile & firmware
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
+      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
+        <Breadcrumbs aria-label="breadcrumb" sx={BreadCrumbStyles}>
+          <BreadCrumbList
+            pathnames={filteredPathnames}
+            routes={routes}
+            capitalizeFirstLetter={capitalizeFirstLetter}
+          />
+        </Breadcrumbs>
+      </Box>
+    </Box>
   );
 };
 
