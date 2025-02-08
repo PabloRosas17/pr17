@@ -1,7 +1,12 @@
 import React from 'react';
 import BreadCrumbItem from './BreadCrumbItem';
 
-const BreadcrumbList = ({ pathnames, routes, capitalizeFirstLetter }) => (
+const BreadcrumbList = ({
+  pathnames,
+  routes,
+  capitalizeFirstLetter,
+  showAboutChip,
+}) => (
   <>
     {pathnames.map((value, index) => {
       const to = `/${pathnames.slice(0, index + 1).join('/')}`;

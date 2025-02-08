@@ -1,7 +1,9 @@
+// In StickyFooter.js
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import MuiAboutChip from '../about/MuiAboutChip';
 
-const StickyFooter = ({ children }) => {
+const StickyFooter = ({ children, showAboutChip = true }) => {
   const emailContent = `
     <a href="mailto:pablo.rosas.0170@gmail.com?subject=Inquiry&body=Opportunities in firmware, software engineering, Android:Chrome, and Cloud." 
        class="email-link">
@@ -37,6 +39,7 @@ const StickyFooter = ({ children }) => {
         }}
         dangerouslySetInnerHTML={{ __html: emailContent }}
       />
+      {showAboutChip && <MuiAboutChip />}
     </Box>
   );
 };
