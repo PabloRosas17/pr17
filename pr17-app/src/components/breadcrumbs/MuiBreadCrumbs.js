@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Box, Breadcrumbs, Card, CardContent, Typography } from '@mui/material';
+=======
 import { Box, Breadcrumbs, Typography } from '@mui/material';
+>>>>>>> ed47021606251d0ae3584c64392e23005aaf598f
 import { useLocation } from 'react-router-dom';
 import routes from '../../routes/routes.js';
 import BreadCrumbList from './BreadCrumbList.js';
@@ -62,6 +66,52 @@ const MuiBreadCrumbs = () => {
         sx={{
           display: 'flex',
           justifyContent: 'center',
+<<<<<<< HEAD
+        }}
+      >
+        <Card
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'primary.light',
+            padding: '0px',
+            borderRadius: '7px',
+            boxShadow: 3,
+            textAlign: 'center',
+            minWidth: '200px',
+            transition: 'transform 0.3s, box-shadow 0.3s',
+            '&:hover': {
+              transform: 'scale(1.05)',
+              boxShadow: 7,
+            },
+          }}
+        >
+          <CardContent sx={{ padding: '0px' }}>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 'bold',
+                color: 'secondary.dark',
+              }}
+            >
+              Soy, Pablo
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: '300',
+                fontStyle: 'italic',
+                fontSize: '11px',
+                color: 'secondary.main',
+              }}
+            >
+              specialist in mobile & firmware
+            </Typography>
+          </CardContent>
+        </Card>
+=======
           flexDirection: 'column',
           alignItems: 'center',
           backgroundColor: 'primary.light',
@@ -90,6 +140,7 @@ const MuiBreadCrumbs = () => {
         >
           specialist in mobile & firmware
         </Typography>
+>>>>>>> ed47021606251d0ae3584c64392e23005aaf598f
       </Box>
       <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
         <Breadcrumbs aria-label="breadcrumb" sx={BreadCrumbStyles}>
