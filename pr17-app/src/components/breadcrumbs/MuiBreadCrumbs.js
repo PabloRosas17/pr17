@@ -61,6 +61,7 @@ const MuiBreadCrumbs = () => {
       <Box
         sx={{
           display: 'flex',
+<<<<<<< Updated upstream
           justifyContent: 'center',
           flexDirection: 'column',
           alignItems: 'center',
@@ -70,6 +71,9 @@ const MuiBreadCrumbs = () => {
           minWidth: '200px',
         }}
       >
+=======
+          justifyContent: 'center',}}>
+>>>>>>> Stashed changes
         <Typography
           variant="h5"
           sx={{
